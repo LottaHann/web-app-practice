@@ -29,5 +29,8 @@ jobs:
         ls -R
         ls -R tests
 
+     - name: Set PYTHONPATH
+      run: echo "PYTHONPATH=$(pwd):${PYTHONPATH}" >> $GITHUB_ENV
+
     - name: Run tests
       run: pytest tests --maxfail=1 --disable-warnings -q
