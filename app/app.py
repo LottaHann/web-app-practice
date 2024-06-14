@@ -12,6 +12,8 @@ products = [
     {"id": 3, "name": "Product 3", "price": 30}
 ]
 
+print(products)
+
 cart = []
 
 templates = Jinja2Templates(directory="templates")
@@ -34,4 +36,4 @@ async def view_cart(request: Request):
 
 if __name__ == '__main__':
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000, log_level="info")
+    uvicorn.run(app, host="127.0.0.1", port=8080, log_level="info")
